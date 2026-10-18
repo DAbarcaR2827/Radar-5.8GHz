@@ -19,7 +19,7 @@ This fragile setup had to improve:
 - The final design must be rigid, centered, and easily adjustable. Therefore, I designed new pieces and implemented the use of screws.
 
 ## CAD Files & Prototype Photos
-Prototype Photo:
+Prototype Photo:![Image](V1_ESP32_UltraSonic_Prototype.jpg)
 
 3D Models Download:
 [Ultra Sonic Sensor Holder](UltraSonicSensorHolder.stl)
