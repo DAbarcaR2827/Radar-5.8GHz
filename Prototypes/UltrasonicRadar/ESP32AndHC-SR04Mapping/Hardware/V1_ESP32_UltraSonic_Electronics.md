@@ -1,7 +1,4 @@
-# Ultrasonic Mapping Prototype — ESP32 Dual-Sensor System
-
-## Objective
-The main objective of this Prototype was to understand the pipeline and mechanical scanning logic before migrating to the 5.8 GHz FMCW radar. Also familiarize myself with the real-time data output by the sensors. 
+# Ultrasonic Mapping ESP32 Dual-Sensor Hardware Prototype specifications.
 
 ## Hardware Setup
 
