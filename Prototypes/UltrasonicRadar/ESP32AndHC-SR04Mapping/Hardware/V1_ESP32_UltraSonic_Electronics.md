@@ -7,8 +7,8 @@ The main objective of this Prototype was to understand the pipeline and mechanic
 
 | ESP32 GPIO  | Component          | Function       | Purpose |
 | :---------: | :----------------: | :------------: | :-----: |
-| GPIO 26, 27 | HC-SR04 (Sensor 1) | Trigger / Echo | First forward-facing sensor |
-| GPIO 32, 33 | HC-SR04 (Sensor 2) | Trigger / Echo | Second sensor for dual-point mapping |
+| GPIO 26, 27 | HC-SR04 (Sensor 1) | Trigger / Echo | First sensor, forward-facing  |
+| GPIO 32, 33 | HC-SR04 (Sensor 2) | Trigger / Echo | Second sensor, for dual-point mapping |
 | GPIO 18     | Servo (Azimuth)    | PWM Control    | 180° horizontal scanning |
 | GPIO 19     | Servo (Elevation)  | PWM Control    | 90° vertical scanning |
 
