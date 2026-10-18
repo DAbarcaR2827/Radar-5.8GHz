@@ -2,12 +2,12 @@
 
 ## Hardware Setup
 
-| ESP32 GPIO  | Component          | Function       | Purpose |
-| :---------: | :----------------: | :------------: | :-----: |
-| GPIO 26, 27 | HC-SR04 (Sensor 1) | Trigger / Echo | First sensor. Forward-facing  |
-| GPIO 32, 33 | HC-SR04 (Sensor 2) | Trigger / Echo | Second sensor. For dual-point mapping |
-| GPIO 18     | Servo (Azimuth)    | PWM Control    | 180° horizontal scanning |
-| GPIO 19     | Servo (Elevation)  | PWM Control    | 90° vertical scanning |
+| ESP32 GPIO  | Component        | Function       | Purpose |
+| :---------: | :--------------: | :------------: | :-----: |
+| GPIO 26, 27 | HC-SR04 Sensor 1 | Trigger / Echo | First sensor. Forward-facing  |
+| GPIO 32, 33 | HC-SR04 Sensor 2 | Trigger / Echo | Second sensor. For dual-point mapping |
+| GPIO 18     | Horizontal Servo | PWM Control    | 180° horizontal scanning |
+| GPIO 19     | Elevation Servo  | PWM Control    | 90° vertical scanning |
 
 ## Mechanical Setup
 
