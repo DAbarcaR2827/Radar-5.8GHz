@@ -22,6 +22,6 @@ This fragile setup had to improve:
 Prototype Photo:![Image](V1_ESP32_UltraSonic_Prototype.jpg)
 
 3D Models Download:
-[Ultra Sonic Sensor Holder](UltraSonicSensorHolder.stl)
-[Servo-motor Holder](ServomotorHolder.stl)
+[Ultra Sonic Sensor Holder](V1_UltraSonicSensorHolder.stl)
+[Servo-motor Holder](V1_ServomotorHolder.stl)
 
