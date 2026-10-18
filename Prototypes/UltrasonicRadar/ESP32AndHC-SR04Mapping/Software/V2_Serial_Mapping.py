@@ -2,6 +2,7 @@ from matplotlib.widgets import Slider
 import serial
 import matplotlib.pyplot as plt
 import numpy as np
+from collections import deque
 
 ser = serial.Serial('COM4', 9600, timeout=1)
 
@@ -11,23 +12,25 @@ fig, axd = plt.subplot_mosaic(
     [['Full', 'Slice'], 
      ['Slider', 'Slider']], 
     figsize=(15, 8)
-)
+    )
 
-axFull = fig.add_subplot(axd['Full'].get_subplotspec(), projection='3d')
-axSlice = fig.add_subplot(axd['Slice'].get_subplotspec(), projection='3d')
-axSlider = axd['Slider']
-
+axFull = axd['Full']
 axFull.set_title('3D Full Map', fontsize=14, fontweight='bold')
 axFull.set_xlabel('X'); axFull.set_ylabel('Y'); axFull.set_zlabel('Z')
 axFull.set_xlim([-200, 200]); axFull.set_ylim([-200, 200]); axFull.set_zlim([-100, 200])
 
-axSlice.set_title('CORTE TRANSVERSAL', fontsize=14, fontweight='bold')
+axSlice = axd['Slice']
+axSlice.set_title('CORTE TRANSVERSAL (Controlado por Slider)', fontsize=14, fontweight='bold')
 axSlice.set_xlabel('X'); axSlice.set_ylabel('Y'); axSlice.set_zlabel('Z')
 axSlice.set_xlim([-200, 200]); axSlice.set_ylim([-200, 200]); axSlice.set_zlim([-100, 200])
 
+axSlider = axd['Slider']
 axSlider.set_title('Altura del Corte', fontsize=12)
-Zslider = Slider(axSlider, 'Z (cm)', -50, 200, valinit=0, valstep=5) 
+Zslider = Slider(axSlider, 'Z', -50, 200, valinit=0, valstep=5) 
 
+Xpoints = deque(maxlen=500)
+Ypoints = deque(maxlen=500)
+Zpoints = deque(maxlen=500)
 
 ScFull = axFull.scatter([], [], [], c=[], cmap='plasma', s=10, alpha=0.8)
 ScSlice = axSlice.scatter([], [], [], c=[], cmap='plasma', s=25, alpha=1.0)
@@ -115,3 +118,4 @@ try:
 except KeyboardInterrupt:
     print("\nAdiosito Gru...\nVector salió del radar")
     ser.close()
+
