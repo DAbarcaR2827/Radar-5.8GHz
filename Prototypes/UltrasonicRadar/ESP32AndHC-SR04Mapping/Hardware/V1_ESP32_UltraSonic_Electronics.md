@@ -25,4 +25,6 @@ This fragile setup had to improve:
 Prototype Photo:
 
 3D Models Download:
+[Ultra Sonic Sensor Holder](UltraSonicSensorHolder.stl)
+[Servo-motor Holder](ServomotorHolder.stl)
 
