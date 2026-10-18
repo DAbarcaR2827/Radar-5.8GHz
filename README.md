@@ -12,7 +12,7 @@ For the antennas the idea to use Bi-quads was born when I saw this man building 
 
 Here I specify The components I'll use and why I changed them:
 
-|  **Type | H. Jeong & S. Kim**    | **My component**              | **Why?** |
+|  **Type** | **H. Jeong & S. Kim**    | **My component**              | **Why?** |
 |---------------|:----------------:|:-----------------------------:|----------|
 | VCO           | HMC431LP4ETR     | HMC358MS8GE                   | Availability and +11 dBm, integrated buffer. |
 | PA1           | GRF2505          | —                             | Both replaced by single PA module. |
