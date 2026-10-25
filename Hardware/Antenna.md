@@ -7,7 +7,6 @@ Based on the Mexican Technical disposition IFT-017-2023, emitted by the IFT or "
 
 | *Parameter*                        | *Limit*            | *What it means* |
 | :--------------------------------: | :----------------: | :-------------: |
-| Conducted power before the antenna | 1 W or +30dBm      | Is the power measured at the output of the power amplifier, before it reaches the antenna. |
 | EIRP                               | 4 W or +36 dBm     | The power that a hypothetical isotropic antenna would have to radiate to produce the same power density as the actual system in the direction of maximum gain. |
 | Spectral density                   | $≤ 200 mW/MHz$     | How much EIRP can be inside every MHz of bandwidth.  |
 | Conducted spectral density         | $≤ 50 mW/MHz$      | The maximum spectral density conducted over every MHZ of signal, before the antenna. |
@@ -16,4 +15,4 @@ Based on the Mexican Technical disposition IFT-017-2023, emitted by the IFT or "
 
 ## Specifications
 
-Considering all those parameters, I have to design a 
+I used the [Kreosan's video](https://www.youtube.com/watch?v=6odNBrwRM1k) as a tutorial of how to build it. Nevertheless I researched information that explain me the common usage for the biquad, which measures it must have. Then I did simulations in Matlab to predict the behavior of it in the real world. 
