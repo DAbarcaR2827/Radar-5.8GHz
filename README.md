@@ -4,15 +4,29 @@
 Some months ago, a drone intruded into my house, not once, but twice. I was scared, so I decided to build a DIY radar to detect drones near my home. P.S. the drone belongs to a neighborhood kid, but the incident made me realize how easily we and our properties are exposed.
 
 The main objective of this project is to develop a radar capable of detecting drones flying over a small neighborhood. There are many news articles that confirm that criminals use drones to spy people and plan their attacks. With this tool, small communities can be aware of the movements a drone can make, for example intruding into a property at night. Also, this system is cheaper than any commercial radar and completely legal. As a starting point I found a similar project by Jeong and Kim (2021): https://www.mdpi.com/2079-9292/10/22/2758#sec2-electronics-10-02758 Here I found an example of a working 5.83Ghz to 5.94GHz radar. 
-For the antennas the idea to use biquads was born when I saw this man building a WiFi antenna: https://www.youtube.com/watch?v=6odNBrwRM1k. Researching I found Vivaldi antenna would be better for this project, because it offers: wider bandwidth, better range resolution and 50Ω impedance . Nevertheless, I chose the biquad because it is easier to manufacture at home. In a future version I may migrate to Vivaldi antennas.
+For the antennas the idea to use biquads was born when I saw this man building a WiFi antenna: https://www.youtube.com/watch?v=6odNBrwRM1k. Researching I found Vivaldi antenna would be better for this project, because it offers: wider bandwidth, which may improve the resolution, and 50Ω impedance . Nevertheless, I chose the biquad because it is easier to manufacture at home and it has an optimal performance in the legal range.
 
+## Legality 
+For this project to be legal, I need to follow the parameters below. More specific in here [README](/README.md).
+
+| **Parameter**                      | **Limit**          | **What it means** |
+| :--------------------------------: | :----------------: | :---------------: |
+| Conducted power before the antenna | 1 W or +30dBm      | Is the power measured at the output of the power amplifier, before it reaches the antenna. |
+| EIRP                               | 4 W or +36 dBm     | The power that a hypothetical isotropic antenna would have to radiate to produce the same power density as the actual system in the direction of maximum gain. |
+| Spectral density                   | $≤ 200 mW/MHz$     | How much EIRP can be in every MHz of bandwidth.  |
+| Conducted spectral density         | $≤ 50 mW/MHz$      | The maximum spectral density conducted over every MHZ of signal, before the antenna. |
+| Minimum bandwidth                  | 500 kHz            | The transmitted signal must work at least at this bandwidth”. |
+| Reduction for gain                 | $G > 6 dBi$        | The conducted power must be reduced by 1 dB for every dB of gain above 6 dBi. |
+ 
 ## How it works
 
 
 
+#### Electronics
+
 Here I specify The components I'll use and why I changed them:
 
-|  **Type** | **H. Jeong & S. Kim**    | **My component**              | **Why?** |
+|    **Type**   | **H. Jeong & S. Kim**    | **My component**      | **Why?** |
 |---------------|:----------------:|:-----------------------------:|----------|
 | VCO           | HMC431LP4ETR     | HMC358MS8GE                   | Availability and +11 dBm, integrated buffer. |
 | PA1           | GRF2505          | —                             | Both replaced by single PA module. |
@@ -28,6 +42,10 @@ Here I specify The components I'll use and why I changed them:
 | Antennas      | Cylindrical horn | Biquad 5.8 GHz                | Easier to manufacture and focuses quite well the beam. |
 | SP4T switches | —                | HMC7992LP3DE                  | Virtual MIMO sequential switching. |
 
+##### Antenna design
+
+
+
 
 
 
@@ -37,3 +55,6 @@ First, I want to familiarize myself with the data this kind of project produces,
 1. Jeong, H.; Kim, S. Educational Low-Cost C-Band FMCW Radar System Comprising Commercial Off-the-Shelf Components for Indoor Through-Wall Object Detection. Electronics 2021, 10, 2758. https://doi.org/10.3390/electronics10222758
 2. Kreosan English. How to Get Free Internet Access. Boosting of Wi-Fi
    Signals. *YouTube*, 25 August 2015. https://www.youtube.com/watch?v=6odNBrwRM1k
+3. Instituto Federal de Telecomunicaciones. Disposición Técnica IFT-017-2023, Equipos de Radiocomunicación que Emplean Tecnología de Espectro Disperso,
+   Modulación Digital y Tecnología de Saltos de Frecuencia. https://www.ift.org.mx/sites/default/files/industria/temasrelevantes/22201/documentos/25-02-10-ift10022501-ift-017.pdf
+4. Instituto Federal de Telecomunicaciones. Inventario de Bandas de Frecuencias Clasificadas como Espectro Libre, https://www.ift.org.mx/sites/default/files/contenidogeneral/espectro-radioelectrico/inventariodebandasdefrecuenciasclasificadascomoespectrolibre-mayo2025.pdf
