@@ -9,11 +9,11 @@ Based on the Mexican Technical disposition IFT-017-2023, emitted by the IFT or "
 | :--------------------------------: | :--------------:   | :------------: |
 | Conducted power before the antenna | 1 W or +30dBm      | Is the power measured at the output of the power amplifier, before it reaches the antenna. |
 | EIRP                               | 4 W or +36 dBm     | The power that a hypothetical isotropic antenna would have to radiate to produce the same power density as the actual system in the direction of maximum gain. |
-| Spectral density                   | $≤ 200 {mW}/{MHz}$ | How much EIRP can be inside every MHz of bandwidth.  |
-| Conducted spectral density         | $≤ 50 mW/MHz$      | The maximum spectral density conducted over every MHZ of signal, before the antenna. |
+| Spectral density                   | $≤ 200 {mW}over{MHz}$ | How much EIRP can be inside every MHz of bandwidth.  |
+| Conducted spectral density         | $≤ 50 {mW}over{MHz}$      | The maximum spectral density conducted over every MHZ of signal, before the antenna. |
 | Minimum bandwidth                  | 500 kHz            | The transmitted signal must work at least at this bandwidth.”. |
 | Reduction for gain                 | $G > 6 dBi$        | The conducted power must be reduced by 1 dB for every dB of gain above 6 dBi. |
 
 
 ## Specifications
-Me voy a mimir
+
